@@ -202,11 +202,11 @@ export const PRICE_CONTENT = {
   price: {
     oldPrice: 'R$197,00',
     newPrice: 'R$47,00',
-    installment: 'R$ 10,02',
+    installment: 'R$ 4,85',
   },
   ctaLabel: 'Quero acessar agora',
   ctaLabelLinesMobile: ['Quero acessar', 'agora'],
-  ctaHref: 'https://checkout.thebank.com.br/pt-BR/7493043795228913664',
+  ctaHref: 'https://checkout.thebank.com.br/pt-BR/7493043529305485312',
 } as const
 
 export const FAQ_CONTENT = {

@@ -66,7 +66,7 @@ export function Price() {
               {PRICE_CONTENT.price.newPrice}
             </p>
             <p className="text-[13px] text-text-on-light/60 lg:text-[14px]">
-              ou 12x de {PRICE_CONTENT.price.installment}
+              12x de {PRICE_CONTENT.price.installment}
             </p>
           </div>
 
