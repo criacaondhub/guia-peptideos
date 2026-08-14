@@ -1,8 +1,8 @@
 version: "3.7"
 
 services:
-  manual-peptideos:
-    image: manual-peptideos:latest
+  guia-peptideos:
+    image: guia-peptideos:latest
     build: .
     networks:
       - GustavoSaNet
@@ -14,14 +14,14 @@ services:
           - node.role == manager
       labels:
         - traefik.enable=true
-        - traefik.http.routers.manual-peptideos.rule=Host(`dr.gustavosa.com.br`) && PathPrefix(`/manual-peptideos`)
-        - traefik.http.routers.manual-peptideos.entrypoints=websecure
-        - traefik.http.routers.manual-peptideos.tls.certresolver=letsencryptresolver
-        - traefik.http.routers.manual-peptideos.service=manual-peptideos
-        - traefik.http.routers.manual-peptideos.middlewares=manual-peptideos-stripprefix
-        - traefik.http.middlewares.manual-peptideos-stripprefix.stripprefix.prefixes=/manual-peptideos
-        - traefik.http.services.manual-peptideos.loadbalancer.server.port=80
-        - traefik.http.services.manual-peptideos.loadbalancer.passHostHeader=true
+        - traefik.http.routers.guia-peptideos.rule=Host(`dr.gustavosa.com.br`) && PathPrefix(`/guia-peptideos`)
+        - traefik.http.routers.guia-peptideos.entrypoints=websecure
+        - traefik.http.routers.guia-peptideos.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.guia-peptideos.service=guia-peptideos
+        - traefik.http.routers.guia-peptideos.middlewares=guia-peptideos-stripprefix
+        - traefik.http.middlewares.guia-peptideos-stripprefix.stripprefix.prefixes=/guia-peptideos
+        - traefik.http.services.guia-peptideos.loadbalancer.server.port=80
+        - traefik.http.services.guia-peptideos.loadbalancer.passHostHeader=true
 
 networks:
   GustavoSaNet:

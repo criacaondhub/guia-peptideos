@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/manual-peptideos/' : '/',
+  base: command === 'build' ? '/guia-peptideos/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

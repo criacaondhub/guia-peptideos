@@ -52,7 +52,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="max-w-4xl text-[30px] leading-[0.95] text-white lg:max-w-[900px] lg:text-[48px]"
+            className="max-w-4xl text-[30px] leading-[1.05] text-white lg:max-w-[900px] lg:text-[48px]"
           >
             <span className="lg:hidden">
               {HERO_CONTENT.titleLinesMobile.map((line, lineIndex) => (

@@ -1,87 +1,57 @@
 export const HERO_CONTENT = {
   titleLines: [
-    [{ text: 'O uso de peptídeos', bold: false }],
-    [
-      { text: 'explodiu', bold: true },
-      { text: ' e hoje, 99% dos', bold: false },
-    ],
-    [
-      { text: 'médicos não sabem ', bold: false },
-      { text: 'manejar', bold: true },
-    ],
-    [
-      { text: 'pacientes', bold: true },
-      { text: ' que estão em uso.', bold: false },
-    ],
+    [{ text: 'Dominar peptídeos deixou de ser', bold: false }],
+    [{ text: 'um diferencial. Virou parte do', bold: false }],
+    [{ text: 'que se espera de um bom médico.', bold: false }],
   ],
   titleLinesMobile: [
-    [{ text: 'O uso de peptídeos', bold: false }],
-    [
-      { text: 'explodiu', bold: true },
-      { text: ' e hoje, 99%', bold: false },
-    ],
-    [{ text: 'dos médicos não sabem', bold: false }],
-    [
-      { text: 'manejar pacientes', bold: true },
-      { text: ' que', bold: false },
-    ],
-    [{ text: 'estão em uso.', bold: false }],
+    [{ text: 'Dominar peptídeos', bold: false }],
+    [{ text: 'deixou de ser um', bold: false }],
+    [{ text: 'diferencial. Virou parte', bold: false }],
+    [{ text: 'do que se espera de um', bold: false }],
+    [{ text: 'bom médico.', bold: false }],
   ],
   subtitleLines: [
+    [{ text: 'Todo dia chega mais paciente perguntando sobre peptídeo.', bold: false }],
     [
       { text: 'Neste ', bold: false },
       { text: 'Manual Completo', bold: true },
-      { text: ' eu te entrego o ', bold: false },
-      { text: 'domínio técnico', bold: true },
+      { text: ' você domina o assunto de verdade,', bold: false },
     ],
-    [{ text: 'de cada peptídeo que existe, para você reassumir o', bold: false }],
-    [{ text: 'comando da consulta e sair na frente.', bold: false }],
+    [{ text: 'classe por classe, e vira a referência que esse paciente procura.', bold: false }],
   ],
   subtitleLinesMobile: [
+    [{ text: 'Todo dia chega mais paciente', bold: false }],
+    [{ text: 'perguntando sobre peptídeo. Neste', bold: false }],
     [
-      { text: 'Neste ', bold: false },
       { text: 'Manual Completo', bold: true },
-      { text: ' eu te entrego', bold: false },
+      { text: ' você domina o assunto', bold: false },
     ],
-    [
-      { text: 'o ', bold: false },
-      { text: 'domínio técnico', bold: true },
-      { text: ' de cada peptídeo', bold: false },
-    ],
-    [{ text: 'que existe, para você reassumir o', bold: false }],
-    [{ text: 'comando da consulta e sair na frente.', bold: false }],
+    [{ text: 'de verdade, classe por classe, e vira a', bold: false }],
+    [{ text: 'referência que esse paciente procura.', bold: false }],
   ],
-  ctaOldPrice: 'R$297,00',
-  ctaNewPrice: 'R$97,00',
+  ctaOldPrice: 'R$197,00',
+  ctaNewPrice: 'R$47,00',
   ctaHref: '#preco',
 } as const
 
 export const UNLOCK_CONTENT = {
-  title: 'Desbloqueie seu acesso ao material completo',
-  titleLinesMobile: ['Desbloqueie seu acesso', 'ao material completo'],
+  title: 'Dá uma olhada no que você vai encontrar aqui dentro',
+  titleLinesMobile: ['Dá uma olhada no que', 'você vai encontrar', 'aqui dentro'],
   subtitle:
-    'Direto ao ponto. Sem informação genérica. Veja tudo o que você vai receber ao finalizar sua inscrição',
+    'Cada seção parte de uma queixa real que chega no seu consultório e mostra qual peptídeo está por trás, o que ele faz e como conduzir.',
   subtitleLinesMobile: [
-    'Direto ao ponto. Sem informação',
-    'genérica. Veja tudo o que você vai',
-    'receber ao finalizar sua inscrição',
+    'Cada seção parte de uma queixa real que chega no seu consultório e mostra qual peptídeo está por trás, o que ele faz e como conduzir.',
   ],
   boxes: [
     {
-      title: 'UM PDF completo com tudo sobre Peptídeos',
-      titleDesktopLines: ['UM PDF completo com', 'tudo sobre Peptídeos'],
+      title: 'O guia completo de peptídeos em PDF',
+      titleMobileLines: ['O guia completo de', 'peptídeos em PDF'],
+      titleDesktopLines: ['O guia completo de', 'peptídeos em PDF'],
       description:
-        'Tenha em suas mãos uma apostila em PDF completa com tudo que você precisa saber sobre peptídeos. Nunca mais tenha dúvidas sobre o assunto e saia na frente dos concorrentes.',
+        'Uma apostila completa que vai da teoria à prática: o que cada classe de peptídeo faz, por que o paciente procura e como você conduz esse caso no consultório.',
       image: 'assets/box-1.webp',
       imageAlt: 'Mockup do e-book Guia em PDF sobre Peptídeos',
-    },
-    {
-      title: 'Masterclass Gravada Sobre Peptídeos',
-      titleDesktopLines: ['Masterclass Gravada', 'Sobre Peptídeos'],
-      description:
-        'Mais de 2 horas de workshop passando por todos os pilares que todo médico precisa saber sobre o tema.',
-      image: 'assets/box-2.webp',
-      imageAlt: 'Mockup de notebook exibindo a masterclass gravada sobre peptídeos',
     },
   ],
   ctaLabel: 'Desbloqueie seu acesso agora',
@@ -226,16 +196,16 @@ export const PRICE_CONTENT = {
     'Acesso Imediato',
     '7 dias de garantia incondicional',
     'Desconto exclusivo de lançamento',
-    'Workshop Completo (+2 horas) sobre Peptídeos',
-    'Guia completo de peptídeos em formato PDF',
+    'Guia completo de peptídeos em PDF, organizado por classe',
+    'Versão atualizada 2026',
   ],
   price: {
-    oldPrice: 'R$297,00',
-    newPrice: 'R$97,00',
+    oldPrice: 'R$197,00',
+    newPrice: 'R$47,00',
     installment: 'R$ 10,02',
   },
-  ctaLabel: 'Garantir meu acesso agora',
-  ctaLabelLinesMobile: ['Garantir meu', 'acesso agora'],
+  ctaLabel: 'Quero acessar agora',
+  ctaLabelLinesMobile: ['Quero acessar', 'agora'],
   ctaHref: 'https://checkout.thebank.com.br/pt-BR/7493043795228913664',
 } as const
 
@@ -258,9 +228,9 @@ export const FAQ_CONTENT = {
         'Você tem liberdade para, dentro de 7 dias, pedir reembolso do treinamento. Faremos ele de maneira integral, sem qualquer tipo de dor de cabeça.',
     },
     {
-      question: 'Posso assistir de onde quiser?',
+      question: 'Posso acessar de onde quiser?',
       answer:
-        'Sim. Este é um material 100% online e gravado (além dos PDFs). Você pode baixar e assistir quando e de onde quiser. Inclusive, muitos alunos usam os materiais em PDF como guia de bolso.',
+        'Sim. Este é um material 100% online em PDF. Você pode baixar e consultar quando e de onde quiser. Muitos médicos usam como material de apoio no dia a dia do consultório.',
     },
   ],
 } as const

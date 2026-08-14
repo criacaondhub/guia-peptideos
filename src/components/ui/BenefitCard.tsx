@@ -6,13 +6,14 @@ const cardClip = responsiveClipPath(chamferClipPath(24))
 
 interface BenefitCardProps {
   title: string
+  titleMobileLines: readonly string[]
   titleDesktopLines: readonly string[]
   description: string
   image: string
   imageAlt: string
 }
 
-export function BenefitCard({ title, titleDesktopLines, description, image, imageAlt }: BenefitCardProps) {
+export function BenefitCard({ titleMobileLines, titleDesktopLines, description, image, imageAlt }: BenefitCardProps) {
   return (
     <div
       style={cardClip.style}
@@ -25,7 +26,14 @@ export function BenefitCard({ title, titleDesktopLines, description, image, imag
 
       <div className="flex flex-1 flex-col gap-2 bg-accent p-5 text-left lg:p-6">
         <h3 className="font-display text-[20px] leading-[1.2] font-bold tracking-wide text-text-heading-on-accent uppercase lg:text-[24px]">
-          <span className="lg:hidden">{title}</span>
+          <span className="lg:hidden">
+            {titleMobileLines.map((line, index) => (
+              <Fragment key={line}>
+                {line}
+                {index < titleMobileLines.length - 1 && <br />}
+              </Fragment>
+            ))}
+          </span>
           <span className="hidden lg:inline">
             {titleDesktopLines.map((line, index) => (
               <Fragment key={line}>
