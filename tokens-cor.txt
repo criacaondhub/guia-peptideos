@@ -1,0 +1,7 @@
+background:         #4C52FE
+surface:            Glassmorphism com degradê nas bordas na cor gelo
+text:               #F0F8FF
+text-heading:       #F0F8FF
+text-muted:         #F0F8FF (Utilizar opacidade de 85%)
+accent:             #121827
+cta:                Degradê Horizontal onde na esquerda começa com a cor #121827 e finaliza com #172444

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Bloquear rotas com dados pessoais (LGPD)
+Disallow: /obrigado
+Disallow: /confirmacao
+Disallow: /*?nome=*
+Disallow: /*?email=*
+Disallow: /*?telefone=*
+Disallow: /*?mensagem=*
+Disallow: /*utm_*
+
+Sitemap: https://dr.gustavosa.com.br/manual-peptideos/sitemap.xml
