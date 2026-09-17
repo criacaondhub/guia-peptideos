@@ -14,12 +14,35 @@ services:
           - node.role == manager
       labels:
         - traefik.enable=true
+
+        # ATENÇÃO às prioridades. Sem `priority`, o Traefik usa o COMPRIMENTO da
+        # regra — e existe outro serviço neste mesmo domínio cuja regra é mais
+        # curta, então a v1 ganhava dele por acidente. Um valor baixo aqui faz a
+        # v1 perder `/guia-peptideos` para esse outro serviço (já aconteceu com
+        # o manual-peptideos). Por isso os dois números são altos: ficam acima
+        # de qualquer prioridade padrão do domínio. A v2 precisa ser maior que a
+        # v1 porque o PathPrefix da v1 também casa '/guia-peptideos-v2' (é
+        # prefixo de string, não de segmento) e capturaria a URL da v2,
+        # removendo o prefixo errado.
         - traefik.http.routers.guia-peptideos.rule=Host(`dr.gustavosa.com.br`) && PathPrefix(`/guia-peptideos`)
         - traefik.http.routers.guia-peptideos.entrypoints=websecure
         - traefik.http.routers.guia-peptideos.tls.certresolver=letsencryptresolver
         - traefik.http.routers.guia-peptideos.service=guia-peptideos
         - traefik.http.routers.guia-peptideos.middlewares=guia-peptideos-stripprefix
+        - traefik.http.routers.guia-peptideos.priority=1000
         - traefik.http.middlewares.guia-peptideos-stripprefix.stripprefix.prefixes=/guia-peptideos
+
+        # v2 — /guia-peptideos-v2, mesmo container e mesmo bundle. Os assets
+        # continuam sendo pedidos em /guia-peptideos/assets/... (o `base` do
+        # Vite não muda), e esses caem no router da v1 — que serve o mesmo lugar.
+        - traefik.http.routers.guia-peptideos-v2.rule=Host(`dr.gustavosa.com.br`) && PathPrefix(`/guia-peptideos-v2`)
+        - traefik.http.routers.guia-peptideos-v2.entrypoints=websecure
+        - traefik.http.routers.guia-peptideos-v2.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.guia-peptideos-v2.service=guia-peptideos
+        - traefik.http.routers.guia-peptideos-v2.middlewares=guia-peptideos-v2-stripprefix
+        - traefik.http.routers.guia-peptideos-v2.priority=2000
+        - traefik.http.middlewares.guia-peptideos-v2-stripprefix.stripprefix.prefixes=/guia-peptideos-v2
+
         - traefik.http.services.guia-peptideos.loadbalancer.server.port=80
         - traefik.http.services.guia-peptideos.loadbalancer.passHostHeader=true
 
