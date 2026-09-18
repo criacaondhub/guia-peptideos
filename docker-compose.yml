@@ -53,6 +53,17 @@ services:
         - traefik.http.routers.guia-peptideos-v3.priority=3000
         - traefik.http.middlewares.guia-peptideos-v3-stripprefix.stripprefix.prefixes=/guia-peptideos-v3
 
+        # v4 — /guia-peptideos-v4, mesma lógica da v2/v3 (mesmo container e
+        # bundle, prioridade acima da v1 pelo mesmo motivo de colisão de
+        # PathPrefix).
+        - traefik.http.routers.guia-peptideos-v4.rule=Host(`dr.gustavosa.com.br`) && PathPrefix(`/guia-peptideos-v4`)
+        - traefik.http.routers.guia-peptideos-v4.entrypoints=websecure
+        - traefik.http.routers.guia-peptideos-v4.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.guia-peptideos-v4.service=guia-peptideos
+        - traefik.http.routers.guia-peptideos-v4.middlewares=guia-peptideos-v4-stripprefix
+        - traefik.http.routers.guia-peptideos-v4.priority=4000
+        - traefik.http.middlewares.guia-peptideos-v4-stripprefix.stripprefix.prefixes=/guia-peptideos-v4
+
         - traefik.http.services.guia-peptideos.loadbalancer.server.port=80
         - traefik.http.services.guia-peptideos.loadbalancer.passHostHeader=true
 
