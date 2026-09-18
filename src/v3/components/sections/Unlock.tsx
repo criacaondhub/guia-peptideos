@@ -21,20 +21,28 @@ export function Unlock() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="font-h2 text-[24px] leading-tight text-balance text-text-heading-on-light uppercase lg:text-4xl"
+            className="font-h2 text-[24px] leading-tight text-balance text-text-heading-on-light lg:text-4xl"
           >
             <span className="lg:hidden">
               {UNLOCK_CONTENT.titleLinesMobile.map((line, lineIndex) => (
-                <span key={line}>
-                  {line}
+                <span key={line.map((segment) => segment.text).join('')}>
+                  {line.map((segment) => (
+                    <span key={segment.text} className={segment.highlight ? 'text-accent' : undefined}>
+                      {segment.text}
+                    </span>
+                  ))}
                   {lineIndex < UNLOCK_CONTENT.titleLinesMobile.length - 1 && <br />}
                 </span>
               ))}
             </span>
             <span className="hidden lg:inline">
               {UNLOCK_CONTENT.titleLines.map((line, lineIndex) => (
-                <span key={line}>
-                  {line}
+                <span key={line.map((segment) => segment.text).join('')}>
+                  {line.map((segment) => (
+                    <span key={segment.text} className={segment.highlight ? 'text-accent' : undefined}>
+                      {segment.text}
+                    </span>
+                  ))}
                   {lineIndex < UNLOCK_CONTENT.titleLines.length - 1 && <br />}
                 </span>
               ))}

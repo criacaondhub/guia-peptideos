@@ -59,14 +59,17 @@ export function Price() {
           </ul>
 
           <div className="flex flex-col items-center gap-1 text-center">
-            <p className="text-[14px] text-text-on-light/60 lg:text-[16px]">
+            <p className="text-[16px] text-red-600 lg:text-[18px]">
               <span className="line-through">DE {PRICE_CONTENT.price.oldPrice}</span> POR APENAS:
             </p>
-            <p className="text-[48px] leading-none font-bold text-text-heading-on-light lg:text-[64px]">
-              {PRICE_CONTENT.price.newPrice}
+            <p className="flex items-baseline justify-center gap-2 lg:gap-3">
+              <span className="text-[24px] font-normal text-text-heading-on-light lg:text-[32px]">12x</span>
+              <span className="text-[52px] leading-none tracking-tight font-bold text-text-heading-on-light lg:text-[68px]">
+                {PRICE_CONTENT.price.installment}
+              </span>
             </p>
-            <p className="text-[13px] text-text-on-light/60 lg:text-[14px]">
-              ou 12x de {PRICE_CONTENT.price.installment}
+            <p className="text-[15px] font-bold text-text-heading-on-light lg:text-[16px]">
+              ou à vista por {PRICE_CONTENT.price.newPrice}
             </p>
           </div>
 

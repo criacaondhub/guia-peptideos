@@ -39,8 +39,7 @@ export const HERO_CONTENT = {
       },
     ],
   ],
-  ctaOldPrice: 'R$197,00',
-  ctaNewPrice: 'R$47,00',
+  ctaLabel: 'ACESSAR AGORA!',
   ctaHref: '#preco',
 } as const
 
@@ -48,17 +47,28 @@ export const HERO_CONTENT = {
 // os mesmos 6 ebooks/classes, só que aqui empacotados no guia único (sem o
 // item de Workshop, que não existe neste produto).
 export const UNLOCK_CONTENT = {
-  titleLines: ['Conheça os 6 volumes que resolvem', 'as situações mais difíceis do consultório'],
-  titleLinesMobile: ['Conheça os 6 volumes que resolvem as situações mais difíceis do consultório'],
+  titleLines: [
+    [{ text: 'Cada material do dossiê foi construído em cima', highlight: false }],
+    [
+      { text: 'de ', highlight: false },
+      { text: 'literatura médica', highlight: true },
+      { text: ' e traduzido de maneira prática.', highlight: false },
+    ],
+  ],
+  // Sem quebras fixas: no mobile o texto só flui e quebra sozinho.
+  titleLinesMobile: [
+    [
+      { text: 'Cada material do dossiê foi construído em cima de ', highlight: false },
+      { text: 'literatura médica', highlight: true },
+      { text: ' e traduzido de maneira prática.', highlight: false },
+    ],
+  ],
   subtitleLines: [
-    'Cada volume mostra, na prática, o que cada peptídeo faz e',
-    'como você deve agir quando o paciente chega com o assunto.',
+    'O que cada peptídeo faz, como você deve',
+    'agir e como funciona cada uma das classes.',
   ],
   subtitleLinesMobile: [
-    'Cada volume mostra, na prática,',
-    'o que cada peptídeo faz e como',
-    'você deve agir quando o paciente',
-    'chega com o assunto.',
+    'O que cada peptídeo faz, como você deve agir e como funciona cada uma das classes.',
   ],
   items: [
     {

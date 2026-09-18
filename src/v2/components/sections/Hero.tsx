@@ -136,10 +136,7 @@ export function Hero() {
             )}
           >
             <span className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -translate-x-[200%] skew-x-[-20deg] bg-white/25 transition-transform duration-700 ease-out group-hover:translate-x-[500%]" />
-            <span className="text-[16px] lg:text-lg">DE</span>
-            <span className="text-[16px] text-white/70 line-through lg:text-lg">{HERO_CONTENT.ctaOldPrice}</span>
-            <span className="text-[16px] lg:text-lg">POR</span>
-            <span className="text-[16px] font-bold lg:text-3xl">{HERO_CONTENT.ctaNewPrice}</span>
+            <span className="text-[16px] font-bold lg:text-lg">{HERO_CONTENT.ctaLabel}</span>
             <ArrowRight size={20} className="shrink-0 lg:hidden" aria-hidden="true" />
             <ArrowRight size={28} className="hidden shrink-0 lg:block" aria-hidden="true" />
           </motion.a>
